@@ -121,35 +121,75 @@ body, html {
     margin-top: 18px;
     margin-bottom: 18px;
 }
-.top__right {
-    background: rgba(255, 255, 255, 0.1);
+.dws {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(165%, -50%);
+   }
+   .butt {
+    border: 1px solid #ffffff1a;
     border-radius: .5rem;
+    text-decoration: none;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
     cursor: pointer;
     font-weight: 500;
     font-size: .875rem;
     line-height: 1.25rem;
     padding: 0 10px;
     margin-left: 12px;
+    padding-top: 2px;
     display: flex;
     align-items: center;
-    gap: 1px;
     text-wrap: nowrap;
-    
-}
-.top__btn {
-    font-size: 12px;
-}
-.top__btn svg {
-    padding-top: 5px;
-}
-.top__btn ul {
+   }
+   .butt ul {
     display: flex;
+    gap: 5px;
     align-items: center;
-}
-.github__logo {
-    width: 18px;
-    height: 18px;
-}
+   }
+   .butt::before,
+   .butt::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    top: 0;
+    left: -100%;
+    opacity: .5;
+    transition: .3s;
+    z-index: -1;
+   }
+   .butt::after {
+    opacity: 1;
+    transition-delay: .2s;
+   }
+   .butt:hover {
+    color: #fff;
+   }
+   .butt:hover::before,
+   .butt:hover::after {
+    left: 0;
+   }
+   
+   
+   .pulse {
+    background-color: white;
+    border-radius: 50%;
+    animation: pulse 0.7s ease-out;
+    transform: scale(0);
+    position: absolute;
+   }
+   @keyframes pulse {
+    to {
+     transform: scale(2);
+     background-color: #fff;
+     opacity: 0;
+    }
+   }
 .about__me {
     padding-top: 170px;
     padding-bottom: 80px;
@@ -216,7 +256,7 @@ body, html {
 }
 .project__github {
     position: relative;
-    right: -9.8rem;
+    right: -11.8rem;
     top: -0.5rem;
     display: grid;
     padding-top: .5rem;
@@ -226,10 +266,10 @@ body, html {
     text-wrap: nowrap;
     background-color: #000;
     border: 1px solid #ffffff1a;
-    border-radius: 16px;
+    border-radius: .5rem;
 }
 .project__github:hover {
-    background-color: #080808;
+    background-color: #131313;
 }
 .pr {
     display: grid;
@@ -280,6 +320,7 @@ body, html {
     padding: .5rem;
     border: 1px solid #ffffff1a;
     border-radius: .75rem;
+    
 }
 .skill__items ul{
     display: flex;
