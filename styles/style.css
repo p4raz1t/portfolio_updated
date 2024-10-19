@@ -254,7 +254,7 @@ body, html {
     width: 100%;
     display: flex;
 }
-.project__github {
+.project__github1 {
     position: relative;
     right: -11.8rem;
     top: -0.5rem;
@@ -268,7 +268,24 @@ body, html {
     border: 1px solid #ffffff1a;
     border-radius: .5rem;
 }
-.project__github:hover {
+.project__github2 {
+    position: relative;
+    right: -12.8rem;
+    top: -0.5rem;
+    display: grid;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-wrap: nowrap;
+    background-color: #000;
+    border: 1px solid #ffffff1a;
+    border-radius: .5rem;
+}
+.project__github1:hover {
+    background-color: #131313;
+}
+.project__github2:hover {
     background-color: #131313;
 }
 .pr {
