@@ -97,6 +97,7 @@ body, html {
     color: #fff;
 }
 .container {
+    padding: 15px 15px;
     margin: 0 auto;
     flex-direction: column;
     max-height: 100vh;
@@ -104,29 +105,32 @@ body, html {
 }
 .top__panel {
     opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid;
-    border-radius: 1rem;
-    border-width: 1px;
-    border-color: #ffffff1a;
-    backdrop-filter: blur(2px);
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 880px;
-    z-index: 1;
-    padding: 12px;
-    margin-top: 18px;
-    margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+    border-top-width: 1px;
+    border-top-color: currentcolor;
+    border-right-width: 1px;
+    border-right-color: currentcolor;
+    border-bottom-width: 1px;
+    border-bottom-color: currentcolor;
+    border-left-width: 1px;
+    border-left-color: currentcolor;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: #ffffff1a;
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  max-width: 880px;
+  z-index: 1;
+  padding: 12px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  gap: 200px;
 }
-.dws {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(165%, -50%);
-   }
    .butt {
     border: 1px solid #ffffff1a;
     border-radius: .5rem;
@@ -437,4 +441,28 @@ body, html {
     font-size: .875rem;
     line-height: 1.25rem;
     color: #ffffff33;
+}
+@media (max-width: 968px) {
+}
+@media (max-width: 876px) {
+    .pr {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: .75rem;
+        margin-top: 16px;
+    }
+    .project__item {
+        max-width: 411px;
+    }
+    .project__github2 {
+        display: none;
+    }
+    .project__github1 {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .top__panel {
+        gap: 50px;
+    }
 }
